@@ -1,6 +1,13 @@
 body {
-    background-color: #ffffff;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
     margin: 0;
+  }
+  #text-page {
+    display: flex;
+    
+    
+    
   }
   
   #container {
@@ -15,7 +22,7 @@ body {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
-    grid-column-end: 17;
+    grid-column-end: 18;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -57,7 +64,57 @@ body {
     grid-row-end: 10;
     grid-column-start: 4;
     grid-column-end: 8;
-    background-color: blue;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+  
+  }
+  #add-depart{
+    display: flex;
+    flex-direction: column;
+    
+    margin-right: 1vh;
+    width: 21vw;
+    justify-content: space-around;
+    
+    
+    
+  }
+  #departure {
+    margin-right: 0vh;
+    width: 21vw;
+    height: 4vh;
+    border:none;
+    background-color: rgb(180, 174, 174);
+    margin-bottom: 10px;
+  }
+  #arrival {
+    margin-right: 0vh;
+    width: 21vw;
+    height: 4vh;
+    border: none;
+    background-color: rgb(243, 236, 236);
+  }
+  #date {
+    display: flex;
+    margin-right: 0vh;
+    width: 21vw;
+    height: 4vh;
+    border: none;
+    border: 1px solid black;
+  }
+  #btn-search {
+    width: 21vw;
+    padding: 6px;
+    border: 3px #ffffff solid;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #0e5104;
+    font-size: 16px;
+    border: 1px solid black;
   }
   
   #content-right {
@@ -65,7 +122,20 @@ body {
     grid-row-end: 10;
     grid-column-start: 10;
     grid-column-end: 14;
-    background-color: red;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .img {
+    width: 21vw;
+    padding-left:18px;
+    color: #ffffff;
+  }
+
+  .text {
+    width: 21vw;
+    padding-left:40px;
+    color: black;
+    font-size: 15px;
   }
   
 
@@ -207,15 +277,6 @@ body {
     border-bottom: 1px solid #dadada;
   }
   
-  #btn-search {
-    width: 6vw;
-    padding: 6px;
-    border: 2px #ffffff solid;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #1161F5;
-    font-size: 16px;
-  }
   
   #btn-search:hover {
     outline: 1px #ffffff solid;
