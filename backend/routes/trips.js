@@ -66,17 +66,19 @@ const { format } = require('morgan');
 
 //!________________________________________________________________ Methode 2
 
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
   // const { departure, arrival, date } = req.body;
   const departure = req.body.departure
   const arrival = req.body.arrival
   const date = req.body.date
 
+  console.log(date)
+
   //* ------------- EMPTY INPUT CHECKING -------------
-  if (!checkField(req.body, ["departure", "arrival", "date"])) {
-    res.json({ result: false, error: 'Missing or empty fields' });
-    return;
-  }
+  // if (!checkField(req.body, ["departure", "arrival", "date"])) {
+  //   res.json({ result: false, error: 'Missing or empty fields' });
+  //   return;
+  // }
   //* ---------- FrontEnd DATE FORMATING -----------------
   const dateYear = date.substr(0, 4);
   const dateMonth = date.substr(5, 2);
@@ -101,12 +103,16 @@ router.get('/', (req, res) => {
   });
 });
 
-router.delete("/", (req, res) => {
-  Trip.deleteOne({_id : req.body.id}).then(data => {
-    res.json()
-  })
-})
+
     
+/**
+ * La page "cart" affiche tous les trajets ajoutés au panier avec la possibilité de les supprimer.
+
+
+Au dessous de ces trajets se trouve le total du panier avec un bouton pour les payer. Au clic sur ce bouton,  le panier est vidé, les trajets payés sont enregistrés dans les réservations (bookings) et l’utilisateur est redirigé vers la page bookings.
+ */
+
+
 
 
 
