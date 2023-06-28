@@ -5,7 +5,7 @@ const departureInput = document.querySelector('#departure').value
 const arrivalInput =document.querySelector('#arrival').value
 const dateInput =document.querySelector('#date').value
 
-// console.log(dateInput)
+console.log(dateInput)
 
 const tripObj = {
     departure: departureInput,
