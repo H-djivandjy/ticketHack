@@ -101,6 +101,12 @@ router.get('/', (req, res) => {
   });
 });
 
+router.delete("/", (req, res) => {
+  Trip.deleteOne({_id : req.body.id}).then(data => {
+    res.json()
+  })
+})
+    
 
 
 
