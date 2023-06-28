@@ -12,8 +12,8 @@ require('./models/connection');
 var indexRouter = require('./routes/index');
 var tripsRouter = require('./routes/trips');
 
-var app = express();
 const cors = require('cors');
+var app = express();
 
 app.use(cors());
 app.use(logger('dev'));

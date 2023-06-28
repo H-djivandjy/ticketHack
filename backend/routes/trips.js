@@ -67,7 +67,10 @@ const { format } = require('morgan');
 //!________________________________________________________________ Methode 2
 
 router.get('/', (req, res) => {
-  const { departure, arrival, date } = req.body;
+  // const { departure, arrival, date } = req.body;
+  const departure = req.body.departure
+  const arrival = req.body.arrival
+  const date = req.body.date
 
   //* ------------- EMPTY INPUT CHECKING -------------
   if (!checkField(req.body, ["departure", "arrival", "date"])) {
@@ -75,10 +78,11 @@ router.get('/', (req, res) => {
     return;
   }
   //* ---------- FrontEnd DATE FORMATING -----------------
-  const dateYear = date.substr(6, 9);
-  const dateMonth = date.substr(3, 2);
-  const dateDay = date.substr(0, 2);
+  const dateYear = date.substr(0, 4);
+  const dateMonth = date.substr(5, 2);
+  const dateDay = date.substr(8, 2);
   const frontDateFormatted = `${dateYear}-${dateMonth}-${dateDay}`;
+  // console.log( frontDateFormatted)
   
   //* ---------- Matching Trip Extraction -> DB -----------------
   Trip.find({
@@ -96,6 +100,7 @@ router.get('/', (req, res) => {
     res.json({ error: 'Sorry, could not find itinary' });
   });
 });
+
 
 
 

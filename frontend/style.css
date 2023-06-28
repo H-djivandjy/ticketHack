@@ -1,6 +1,6 @@
 body {
-    background-image: url(./images/background.jpg);
-    background-size: cover;
+    /* background-image: url(./images/background.jpg);
+    background-size: cover; */
     margin: 0;
   }
   #text-page {
@@ -70,8 +70,14 @@ body {
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-  
+    border: solid 1px rgb(222, 223, 225);
   }
+  #content-left:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    border: solid 1px rgb(222, 223, 225);
+  }
+
   #add-depart{
     display: flex;
     flex-direction: column;
@@ -124,6 +130,7 @@ body {
     grid-column-end: 14;
     background-color: white;
     border-radius: 10px;
+    border: solid 2px rgb(222, 223, 225);
   }
   .img {
     width: 21vw;
